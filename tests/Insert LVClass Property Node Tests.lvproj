@@ -17,8 +17,8 @@
 			<Item Name="myClassWOPropFolder.lvclass" Type="LVClass" URL="../myClassWOPropFolder/myClassWOPropFolder.lvclass"/>
 			<Item Name="myEmptyClass.lvclass" Type="LVClass" URL="../myEmptyClass/myEmptyClass.lvclass"/>
 			<Item Name="myOtherClass.lvclass" Type="LVClass" URL="../myOtherClass/myOtherClass.lvclass"/>
-			<Item Name="Tester.vi" Type="VI" URL="../Tester.vi"/>
 		</Item>
+		<Item Name="Tester.vi" Type="VI" URL="../Tester.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
