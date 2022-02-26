@@ -12,11 +12,22 @@ The LabVIEW Shortcut Menus are accessible from front-panels and block-diagrams a
 
 At startup, LabVIEW searches and loads LabVIEW Shortcut Plug-ins from LLBs from some specific locations. You have 2 kinds of plug-in folders:
 - version-specific: used by this one version of LabVIEW only.
-	- For plug-ins that affect edit-time front-panel and block-diagram objects use <LabVIEW install directory>\resource\plugins\PopupMenus\edit time panel and diagram folder.
-	- For plug-ins that affect Run-Time block-diagram objects use <LabVIEW install directory>\resource\plugins\PopupMenus\run time diagram folder.
+	- For plug-ins that affect edit-time front-panel and block-diagram objects use this folder:
+		- On Windows <LabVIEW install directory>\resource\plugins\PopupMenus\edit time panel and diagram
+		- On Mac OS /Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/edit time panel and diagram
+
+	- For plug-ins that affect Run-Time block-diagram objects use this folder:
+		- On Windows <LabVIEW install directory>\resource\plugins\PopupMenus\run time diagram
+		- On Mac OS /Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/run time diagram
+
 - version-agnostic: to share across all versions of LabVIEW.
-	- For plug-ins that affect edit-time front-panel and block-diagram objects use <LabVIEW Data>\PopupMenus\edit time panel and diagram folder.
-	- For plug-ins that affect run-time block-diagram objects use <LabVIEW Data>\PopupMenus\run time diagram folder.
+	- For plug-ins that affect edit-time front-panel and block-diagram objects use this folder
+		- On Windows <LabVIEW Data>\PopupMenus\edit time panel and diagram
+		- On Mac OS /Users/<your user>/Documents/LabVIEW Data/PopupMenus/edit time panel and diagram
+
+	- For plug-ins that affect run-time block-diagram objects use this folder:
+		- On Windows <LabVIEW Data>\PopupMenus\run time diagram
+		- On Mac OS /Users/<your user>/Documents/LabVIEW Data/PopupMenus/run time diagram
 
 If two plug-ins have the same name, LabVIEW will give the priority to the plug-in in the <LabVIEW install directory>\resource\plugins\PopupMenus directory and won't execute the other.
 
@@ -51,6 +62,8 @@ This utility generates the LLB, with the 3 main components of a Shortcut Menu pl
 
 Let's use a real-life scenario as an example of the LabVIEW Shortcut Menu plug-in creation process. Imagine we want to implement a Shortcut Menu plug-in, called myPlugIn, that will change the background color of Numeric controls and Numeric constants. 
 
+---
+
 ### Affected Items
 
 First we specify which front-panel or block-diagram objects our shortcut menu plug-in operates on by editing the **Affected Items** control. 
@@ -69,6 +82,8 @@ Based on the object types defined in the **Affected Items**, LabVIEW runs a spec
 * You can disconnect the "Affected Items" from the typedef to make the plug-in load faster. The typedef is only there to assist you in keeping this VI and the execution VI using to the same type.
 * Only include the most specific classes your plugin affects.
 
+---
+
 ### Builder VI
 
 Now, we have to tell LabVIEW which items to add to, or toggle, or remove from the shortcut menu. 
@@ -77,7 +92,7 @@ Now, we have to tell LabVIEW which items to add to, or toggle, or remove from th
 
 In the **Builder VI** each menu item is described by :
 - _Menu_ _Item_ _Display_ _Name_: is the text displayed in the right-click menu. If left empty it adds a menu separator bar. By default, the Item Display Name is the Builder VI name without the file extension. Let's change it to "Change Background Color",  that helps the end user to know what expect when selecting this item.   
-- _Menu_ _Item_ _Tag_ _Suffix__: is used we you assign multiple menu items in one plugin.
+- _Menu_ _Item_ _Tag_ _Suffix_: is used we you assign multiple menu items in one plugin.
 - _Path_ _To_ _Execution_ _VI_: is the VI that LabVIEW will launch if the end user select this entry. 
 - _Transaction_ _Control_: tells to LabVIEW to weither or not add an Edit > Undo option for the operation made, when the item is selected, in the user VI. 
 - _Position_ _In_ _Menu_: indicates where (Before, Instead of, After, Into Submenu), relatively to the specified menu item tag, you want your menu item to appear. By default, the menu item will be right before "Properties" or as the last item in the menu if "Properties" is not in that menu.
@@ -115,6 +130,8 @@ Back to our example, using the following rules:
 	* Global VIs can be used to persist data between plugin runs.
 	* Global VIs can also share data between the builder VI and the execute VI.
 * As Debugging tools (probes, breakpoints, etc.) cannot be used in the Builder VI, use Log to file, One Button Dialog, Debug Write.vim, etc, instead.
+
+---
 
 ### Execute VI
 
