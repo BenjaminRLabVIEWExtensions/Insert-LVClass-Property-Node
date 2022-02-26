@@ -13,23 +13,23 @@ The LabVIEW Shortcut Menus are accessible from front-panels and block-diagrams a
 At startup, LabVIEW searches and loads LabVIEW Shortcut Plug-ins from LLBs from some specific locations. You have 2 kinds of plug-in folders:
 - version-specific: used by this one version of LabVIEW only.
 	- For plug-ins that affect edit-time front-panel and block-diagram objects use this folder:
-		- On Windows <LabVIEW install directory>\resource\plugins\PopupMenus\edit time panel and diagram
-		- On Mac OS /Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/edit time panel and diagram
+		- On Windows 	`<LabVIEW install directory>\resource\plugins\PopupMenus\edit time panel and diagram`
+		- On Mac OS 	`/Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/edit time panel and diagram`
 
 	- For plug-ins that affect Run-Time block-diagram objects use this folder:
-		- On Windows <LabVIEW install directory>\resource\plugins\PopupMenus\run time diagram
-		- On Mac OS /Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/run time diagram
+		- On Windows 	`<LabVIEW install directory>\resource\plugins\PopupMenus\run time diagram`
+		- On Mac OS 	`/Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/run time diagram`
 
 - version-agnostic: to share across all versions of LabVIEW.
 	- For plug-ins that affect edit-time front-panel and block-diagram objects use this folder
-		- On Windows <LabVIEW Data>\PopupMenus\edit time panel and diagram
-		- On Mac OS /Users/<your user>/Documents/LabVIEW Data/PopupMenus/edit time panel and diagram
+		- On Windows 	`<LabVIEW Data>\PopupMenus\edit time panel and diagram`
+		- On Mac OS 	`/Users/<your user>/Documents/LabVIEW Data/PopupMenus/edit time panel and diagram`
 
 	- For plug-ins that affect run-time block-diagram objects use this folder:
-		- On Windows <LabVIEW Data>\PopupMenus\run time diagram
-		- On Mac OS /Users/<your user>/Documents/LabVIEW Data/PopupMenus/run time diagram
+		- On Windows 	`<LabVIEW Data>\PopupMenus\run time diagram`
+		- On Mac OS 	`/Users/<your user>/Documents/LabVIEW Data/PopupMenus/run time diagram`
 
-If two plug-ins have the same name, LabVIEW will give the priority to the plug-in in the <LabVIEW install directory>\resource\plugins\PopupMenus directory and won't execute the other.
+If two plug-ins have the same name, LabVIEW will give the priority to the plug-in in the `<LabVIEW install directory>\resource\plugins\PopupMenus` on Windows, or `/Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus` on Mac OS, directory and won't execute the other.
 
 ## The anatomy of a LabVIEW Shortcut Plug-in
 
@@ -52,7 +52,7 @@ When you create a Shortcut Menu plug-in, you will go through 3 steps:
 - Edit how the plug-in executes when you select the custom item.
 
 LabVIEW offers an utility to guide us creating new Shortcut Menu plug-ins.
-Open the <LabVIEW install directory>\resource\plugins\PopupMenus\Create Shortcut Menu Plug-In From Template.vi and fill the different fields and run the VI.
+Open the `<LabVIEW install directory>\resource\plugins\PopupMenus\Create Shortcut Menu Plug-In From Template.vi` on Windows, or `/Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/Create Shortcut Menu Plug-In From Template.vi` on Mac OS, and fill the different fields and run the VI.
 
 ![Create LabVIEW Shortcut Plug-In From Template](/img/CreateLvMenusFromTemplate.png)
 
@@ -148,5 +148,5 @@ As discussed above, LabVIEW loads context menu plug-ins on startup, so you have 
 * Make sure the builder VI is light-weight to avoid shortcut menu loading time.
 * All controls on this panel, except "Affected Items", are locked to prevent accidental edits.
 * Debugging tools can be used in the Execute VI.
-* It is possible to reload plug-ins without restarting LabVIEW, invoking the Menus:Refresh method. You can find the <LabVIEW install directory>\resource\plugins\PopupMenus\support\Refresh Menus.vi which does exactly that!  
+* It is possible to reload plug-ins without restarting LabVIEW, invoking the Menus:Refresh method. You can find the `<LabVIEW install directory>\resource\plugins\PopupMenus\support\Refresh Menus.vi` on Windows, or `/Applications/National Instruments/<LabVIEW XXXX 64-bit>/resource/plugins/PopupMenus/support/Refresh Menus.vi` on Mac OS, which does exactly that!  
 
