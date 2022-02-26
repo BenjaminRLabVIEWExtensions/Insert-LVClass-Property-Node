@@ -43,7 +43,7 @@ When you create a Shortcut Menu plug-in, you will go through 3 steps:
 LabVIEW offers an utility to guide us creating new Shortcut Menu plug-ins.
 Open the <LabVIEW install directory>\resource\plugins\PopupMenus\Create Shortcut Menu Plug-In From Template.vi and fill the different fields and run the VI.
 
-![Create LabVIEW Shortcut Plug-In From Template](/img/CreateLvMenusFromTemplate)
+![Create LabVIEW Shortcut Plug-In From Template](/img/CreateLvMenusFromTemplate.png)
 
 You have to enter the name of your plug-in, specify whether the shortcut menu plug-in affects edit time or run-time shortcut menus, and optionnaly check/uncheck Open Plugin VIs after creation, before running the VI. 
 
@@ -68,7 +68,6 @@ Based on the object types defined in the **Affected Items**, LabVIEW runs a spec
 #### :bulb: Note
 * You can disconnect the "Affected Items" from the typedef to make the plug-in load faster. The typedef is only there to assist you in keeping this VI and the execution VI using to the same type.
 * Only include the most specific classes your plugin affects.
-
 
 ### Builder VI
 
@@ -102,7 +101,7 @@ Back to our example, using the following rules:
 
 ![Builder VI myPlugIn](/img/myPlugInBuilder_Specified.png)
 
-####:warning: Caution
+#### :warning: Caution
 * Do not modify the controls that are assigned to connector pane terminals. To load and execute plug-ins, LabVIEW requires these predefined control names, types, and terminal positions.
 * This VI's file name must match the file name of the LLB -- only the file extensions should be different.
 * This VI must have debugging disabled or it will be ignored as a plug-in.
@@ -125,7 +124,7 @@ Let's dive into the final step and define actions that LabVIEW performs when you
 
 As discussed above, LabVIEW loads context menu plug-ins on startup, so you have restart LabVIEW for the changes to take effect and see your your Shortcut Menu Plug-In. 
 
-####:warning: Caution
+#### :warning: Caution
 * Be careful reading the Data Type property: there is a potential issues reading data types across Application Instances. If you need to read a data type, do it in the owning VI’s Application Instance or use **Request Deallocation**.
 
 #### :bulb: Note
