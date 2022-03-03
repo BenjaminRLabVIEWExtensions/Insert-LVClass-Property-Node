@@ -1,3 +1,7 @@
+layout: page
+title: "LabVIEW Shortcut Menu Plug-ins"
+permalink: /lvmenus/
+
 # LabVIEW Shortcut Menu Plug-ins
 
 With LabVIEW 2015 came the ability to add custom items to the shortcut menu (aka right-click menu)of front panel and block diagram objects with G code. This allows you you to pimp your LabVIEW editor by adding new menu items, rearranging or replacing existing menu items and manipulating menu items (enable/disable, check/uncheck, ...). 
