@@ -3,7 +3,7 @@
 LabVIEW shortcut menu plug-In to insert LVClass Property Node (Read or Write) or display dialog to choose which property to create with which access (Read, Write, Read and Write).
 
 <p align="center">
-<img src="https://github.com/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node/blob/534ee0f76c2625f5f4458a4131d51de2580e5bb9/img/InsertPropertyNode.gif" alt="Insert LVClass Property Node" width="400" height="300"/>
+<img src="https://github.com/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node/blob/fbfaeea92b75b6e0b7d5d634c1207b5a99a11c42/img/InsertPropertyNode.gif" alt="Insert LVClass Property Node" width="400" height="300" pointer-events="none"/>
 </p>
   
 ## Installation
