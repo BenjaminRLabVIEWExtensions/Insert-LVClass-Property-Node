@@ -51,7 +51,7 @@ To know more about LabVIEW Shortcut Menu Plug-ins:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[release-shield]: https://img.shields.io/github/downloads/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node/total?style=for-the-badge
+[release-shield]: ![GitHub release (latest by date)](https://img.shields.io/github/v/release/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node?color=orange&logo=labview&style=for-the-badge)
 [release-url]: https://github.com/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node/releases
 [wiki-shield]: https://img.shields.io/github/discussions/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node?style=for-the-badge
 [wiki-url]: https://github.com/BenjaminRLabVIEWExtensions/Insert-LVClass-Property-Node/wiki
