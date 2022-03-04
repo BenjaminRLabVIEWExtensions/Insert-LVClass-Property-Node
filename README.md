@@ -1,10 +1,11 @@
 <div id="top"></div>
-
-[![GitHub all releases][release-shield]][release-url]
-[![Wiki][wiki-shield]][wiki-url]
-[![Issues][issues-shield]][issues-url]
-[![Zero-Clause BSD][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<p align="center>
+  [![GitHub all releases][release-shield]][release-url]
+  [![Wiki][wiki-shield]][wiki-url]
+  [![Issues][issues-shield]][issues-url]
+  [![Zero-Clause BSD][license-shield]][license-url]
+  [![LinkedIn][linkedin-shield]][linkedin-url]
+</p>
 
 # Insert LVClass Property Node
 
